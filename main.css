@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: #505050;
+}
+
+header {
+    position: relative;
+    background-color: #202020;
+    color: white;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90vw;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+nav a {
+    all: unset;
+    cursor: pointer;
+}
+    
+.logo {
+    font-weight: 600;
+    font-size: 32px;
+}
+
+.links {
+    display: flex;
+    gap: 1rem;
+}
+
+.hamburguer {
+    display: none;
+    cursor: pointer;
+    border: 1px solid rgb(84, 84, 84);
+    border-radius: 50%;
+    padding: .3rem;
+}
+
+.hamburguer:hover {
+    border: 1px solid rgb(129, 129, 129);
+    background-color: rgb(45, 45, 45);
+    transition: all 150ms;
+}
+
+.hamburguer .line {
+    margin: 0 auto;
+    width: 1.3rem;
+    height: 2px;
+    margin: 4px;
+    background-color: white;
+}
+
+@media (max-width: 450px) {
+    .links {
+        display: none;
+    }
+    .links[data-show="1"] {
+        display: flex;
+        position: absolute;
+        width: 100vw;
+        padding: 1rem 0;
+        text-align: center;
+        background-color: #202020;
+        flex-direction: column;
+        bottom: 0;
+        left: 0;
+        transform: translate(0, calc(100%));
+    }
+    .hamburguer {
+        display: block;
+    }
+}
