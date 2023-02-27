@@ -1,7 +1,2 @@
-const hambuguer = document.querySelector('.hamburguer')
 const links = document.querySelector('.links')
-
-hambuguer.onclick = () => {
-    console.log(links.dataset)
-    links.dataset.show = links.dataset.show === '1' ? '0' : '1'
-}
+document.querySelector('.hamburguer').onclick = () => links.dataset.show = 0+!~~links.dataset.show
